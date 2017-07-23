@@ -1,5 +1,5 @@
-#### webpack-learning
+#### 学习webpack2 (2017.07.23)
 
-    学习之前，确保本地全局安装 webapck, webpack-dev-server
+[webpack中文文档](https://doc.webpack-china.org/)
 
-    npm i webpack webpack-dev-server -g
+

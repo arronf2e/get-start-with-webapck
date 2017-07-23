@@ -1,1 +1,0 @@
-document.write("<h1>hello world, I am arron</h1>");
