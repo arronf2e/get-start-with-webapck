@@ -1,0 +1,28 @@
+const path = require('path');
+
+module.exports = {
+	entry: './src/index.js', // 入口文件
+	output: { // 打包出的文件配置
+		filename: 'bundle.js',
+		path: path.resolve(__dirname, 'dist')
+	}
+};
+
+
+/*
+	
+	@ 备注
+
+	@ __dirname: 当前目录: https://nodejs.org/docs/latest/api/modules.html#modules_dirname, 
+
+	@ path.resolve: 路径导航，相当于不断的调用系统的cd命令  https://nodejs.org/docs/latest/api/path.html#path_path_relative_from_to
+
+		path.resolve('foo/bar', './baz')
+
+		=> cd foo/bar
+
+		=> cd baz
+
+		=> pwd
+
+*/
