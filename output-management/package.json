@@ -11,10 +11,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "copy-webpack-plugin": "^4.0.1",
-    "css-loader": "^0.28.4",
-    "file-loader": "^0.11.2",
-    "style-loader": "^0.18.2",
+    "clean-webpack-plugin": "^0.1.16",
+    "html-webpack-plugin": "^2.29.0",
     "webpack": "^3.3.0"
   }
 }

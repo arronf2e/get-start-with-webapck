@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	entry: './src/index.js', // 入口文件
@@ -12,9 +13,18 @@ module.exports = {
 			use: ['style-loader', 'css-loader']
 		}, {
 			test: /\.(png|svg|jpg|gif)$/,
-			use: ['file-loader?limit=8192&name=dist/images/[name].[ext]'] // 这边配置一下图片的输出文件夹以及名字等等
+			use: ['file-loader?limit=8192&name=images/[name].[ext]'] // 这边配置一下图片的输出文件夹以及名字等等
+		}, {
+			test: /\.(woff|woffz|eot|ttf|otf)$/,
+			use: ['file-loader?&name=fonts/[name].[ext]']
 		}]
-	}
+	},
+	plugins: [
+		new CopyWebpackPlugin([{
+			from: 'index.html',
+			to: 'index.html'
+		}])
+	]
 };
 
 

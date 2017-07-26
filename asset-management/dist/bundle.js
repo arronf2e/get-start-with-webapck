@@ -67,7 +67,7 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "dist/images/b9aa2db8.avatar.png";
+module.exports = __webpack_require__.p + "images/avatar.png";
 
 /***/ }),
 /* 1 */
@@ -82,15 +82,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-console.log('avatar------', __WEBPACK_IMPORTED_MODULE_1__images_avatar_png___default.a)
-
 const avatar = new Image();
 
 avatar.src = __WEBPACK_IMPORTED_MODULE_1__images_avatar_png___default.a;
 
 document.body.append(avatar);
-
-console.log('hello webpack');
 
 /***/ }),
 /* 2 */
@@ -107,7 +103,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(5)(content, options);
+var update = __webpack_require__(6)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -132,7 +128,7 @@ exports = module.exports = __webpack_require__(4)(undefined);
 
 
 // module
-exports.push([module.i, ".hello {\n\tfont-size: 20px;\n\tcolor: blue;\n\tbackground: url(" + __webpack_require__(0) + ");\n}", ""]);
+exports.push([module.i, "@font-face {\n\tfont-family: 'Myfont';\n\tsrc: url(" + __webpack_require__(5) + ") format('woff');\n\tfont-weight: 600;\n\tfont-style: normal;\n}\n\n.hello {\n\tfont-family: 'Myfont';\n\tfont-size: 20px;\n\tcolor: blue;\n\tbackground: url(" + __webpack_require__(0) + ");\n}", ""]);
 
 // exports
 
@@ -223,6 +219,12 @@ function toComment(sourceMap) {
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__.p + "fonts/iconfont.woff";
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
 /*
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
@@ -266,7 +268,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(6);
+var	fixUrls = __webpack_require__(7);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -579,7 +581,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports) {
 
 

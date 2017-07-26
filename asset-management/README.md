@@ -7,7 +7,7 @@
 	// 在webpack.config.js中的module配置中添加这两个loader
 	
 	module.exports = {
-		...
+	   ...
 		module: {
 			rules: [{
 				test: /\.css$/,
@@ -39,7 +39,7 @@
 			use: ['style-loader', 'css-loader']
 			}, {
 				test: /\.(png|svg|jpg|gif)$/,
-				use: ['file-loader?limit=8192&name=dist/images/[name].[ext]'] // 这边配置一下图片的输出文件夹以及名字等等
+				use: ['file-loader?limit=8192&name=images/[name].[ext]'] // 这边配置一下图片的输出文件夹以及名字等等
 			}]
 		}
 		...
@@ -51,6 +51,39 @@
 	
 #### 加载字体 
 
-	wait for ...
+> 依然使用file-loader
 
+	module.exports = {
+		...
+		module: {
+			rules: [
+				...
+			}, {
+				test: /\.(woff|woffz|eot|ttf|otf)$/,
+				use: ['file-loader?name=fonts/[name].[ext]']
+			}]
+		}
+		...
+	}
+
+#### 加载数据 (JSON, CSV, TSV, XML)
+> 只需要安装相应的loaders，rules中写入，类似上面
+
+	npm i csv-loader xml-loader --save-dev
+	
+	module.exports = {
+		...
+		module: {
+			rules: [
+				...
+			}, {
+				test: /\.(csv|tsv)$/,
+				use: ['csv-loader']
+			}, {
+				test: /\.xml$/,
+				use: ['xml-loader']
+			}]
+		}
+		...
+	}
 	
