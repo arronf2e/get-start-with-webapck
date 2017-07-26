@@ -10,3 +10,5 @@
 [3. 管理输出](https://github.com/arronf2e/get-start-with-webapck3/tree/master/output-management)
 
 [4. 开发](https://github.com/arronf2e/get-start-with-webapck3/tree/master/development)
+
+[5. 模块热替换HMR](https://github.com/arronf2e/get-start-with-webapck3/tree/master/hot-module-replacement)
